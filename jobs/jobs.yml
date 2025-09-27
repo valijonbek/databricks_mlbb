@@ -1,0 +1,12 @@
+resources:
+  jobs:
+    process_tournament_data:
+      name: process_tournament_data
+      tasks:
+        - task_key: execut_notebook_tournament_data
+          notebook_task:
+            notebook_path: /Workspace/Users/1993valijonbek@gmail.com/mlbb/ingest_tournament_data
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
